@@ -5,7 +5,7 @@ using UnityEngine;
 public class CreadorColumnas : MonoBehaviour
 {
 
-    //UltimoComitParaQueLosVeasTodosJuntos
+    
     public float numeroColumnas;
 
     [SerializeField] GameObject columnas;
@@ -67,5 +67,6 @@ void CrearColumna(){
 
         }
         }
+    
 }
 

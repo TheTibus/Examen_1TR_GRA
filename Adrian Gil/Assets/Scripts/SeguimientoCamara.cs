@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SeguimientoCamara : MonoBehaviour
 {
-    //UltimoComitParaQueLosVeasTodosJuntos
+   
     public Transform posicionJugador;
     // Start is called before the first frame update
     void Start()
@@ -19,4 +19,5 @@ public class SeguimientoCamara : MonoBehaviour
 
 
     }
+    
 }
