@@ -1,16 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MovimientoMando : MonoBehaviour
 {
     public float speed;
+    public float contador;
+    public Text puntuacion;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        speed = 40f;
+        speed = 60f;
         transform.position = new Vector3(0, 2, 0);
+        contador = 0;
+        puntuacion.text = "Puntuación: 0";
     }
 
     
@@ -19,9 +25,17 @@ public class MovimientoMando : MonoBehaviour
 
        
         MoverJugador();
-       
+        
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+
+        Destroy(other.gameObject);
+        contador = contador + 1;
+        puntuacion.text = "Puntuación:  " + contador;
+       
+    }
     void MoverJugador()
     {
 
