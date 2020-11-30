@@ -4,61 +4,66 @@ using UnityEngine;
 
 public class CreadorColumnas : MonoBehaviour
 {
-    public float numeroColumnas = 0;
+    public float numeroColumnas;
+
     [SerializeField] GameObject columnas;
+
+
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine("ColumnCorrutine");
+        numeroColumnas = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
-
-    void CrearColumna()
-    {
+void CrearColumna(){
 
         float posRandom = Random.Range(-34, 34);
         float posRandom2 = Random.Range(-34, 34);
 
         Vector3 DestPos = new Vector3(posRandom, 5, posRandom2);
         Instantiate(columnas, DestPos, Quaternion.identity);
-        numeroColumnas ++;
+        numeroColumnas++;
         print(numeroColumnas);
-    }
-    
-      
-   
-    IEnumerator ColumnCorrutine()
-    {
-        for(int n = 0; ; n++)
+     }
+
+     
+
+     IEnumerator ColumnCorrutine()
         {
-            CrearColumna();
-           
-            if (numeroColumnas <= 5)
-            {
-                print("Pasan 1 segundos");
+         for(int n = 0; ; n++)
+         {
+             CrearColumna();
+
+             if (numeroColumnas <= 15)
+             {
+                
+                // print("Pasan 1 segundos"); 
                 yield return new WaitForSeconds(0.5f);
                
             }
-            else if (numeroColumnas <= 10)
+            else if (numeroColumnas <= 30)
             {
-                print("Pasan 5 segundos");
+                
+                //print("Pasan 5 segundos");
                 yield return new WaitForSeconds(2f);
                 
             }
             else
             {
-                print("Pasan 10 segundos");
+                
+                // print("Pasan 10 segundos"); 
                 yield return new WaitForSeconds(5f);
                 
             }
 
         }
-    }
-    
+        }
 }
+
