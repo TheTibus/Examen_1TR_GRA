@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MovimientoMando : MonoBehaviour
 {
+    //UltimoComitParaQueLosVeasTodosJuntos
     public float speed;
     public float contador;
     public Text puntuacion;

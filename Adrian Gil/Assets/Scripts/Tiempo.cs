@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Tiempo : MonoBehaviour
 {
-    
+    //UltimoComitParaQueLosVeasTodosJuntos
     [SerializeField] Text TimePlayed;
     float tiempo;
     float minutos;
